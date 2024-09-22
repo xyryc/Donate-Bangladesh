@@ -2,9 +2,9 @@ document
   .getElementById("donate-button-noakhali")
   .addEventListener("click", function () {
     const balance = getTextFieldValueById("balance");
-
     const donationAmount = getInputFieldValueById("donation-amount-noakhali");
-    const noakhaliBalance = getTextFieldValueById("noakhali-total-balance");
+    const cardBalance = getTextFieldValueById("noakhali-total-balance");
+    const donationTitle = getTextById("noakhali-donation-title");
 
     if (
       donationAmount > balance ||
@@ -14,23 +14,61 @@ document
       alert("Invalid Donation Amount");
       return;
     } else {
-      const noakhaliNewBalance = noakhaliBalance + donationAmount;
-
-      setBalance("noakhali-total-balance", noakhaliNewBalance);
-
+      const cardNewBalance = cardBalance + donationAmount;
+      setBalance("noakhali-total-balance", cardNewBalance);
       const newBalance = balance - donationAmount;
       setBalance("balance", newBalance);
-
       showModal();
+      setNotification(donationAmount, donationTitle);
+    }
+  });
 
-      const currentDate = new Date();
+document
+  .getElementById("donate-button-feni")
+  .addEventListener("click", function () {
+    const balance = getTextFieldValueById("balance");
+    const donationAmount = getInputFieldValueById("donation-amount-feni");
+    const cardBalance = getTextFieldValueById("feni-total-balance");
+    const donationTitle = getTextById("feni-donation-title");
 
-      const div = document.createElement("div");
-      div.classList.add("space-y-3", "p-8", "border", "rounded-2xl");
-      div.innerHTML = `<p class="text-xl font-bold ">${donationAmount} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-              <p class="text-base font-light">Date : ${currentDate}</p>
-           `;
+    if (
+      donationAmount > balance ||
+      isNaN(donationAmount) ||
+      donationAmount <= 0
+    ) {
+      alert("Invalid Donation Amount");
+      return;
+    } else {
+      const cardNewBalance = cardBalance + donationAmount;
+      setBalance("feni-total-balance", cardNewBalance);
+      const newBalance = balance - donationAmount;
+      setBalance("balance", newBalance);
+      showModal();
+      setNotification(donationAmount, donationTitle);
+    }
+  });
 
-      document.getElementById("history-cards").appendChild(div);
+document
+  .getElementById("donate-button-quota-aid")
+  .addEventListener("click", function () {
+    const balance = getTextFieldValueById("balance");
+    const donationAmount = getInputFieldValueById("donation-amount-quota-aid");
+    const cardBalance = getTextFieldValueById("quota-aid-total-balance");
+    const donationTitle = getTextById("quota-aid-donation-title");
+
+    if (
+      donationAmount > balance ||
+      isNaN(donationAmount) ||
+      donationAmount <= 0
+    ) {
+      alert("Invalid Donation Amount");
+      return;
+    } else {
+      const cardNewBalance = cardBalance + donationAmount;
+      setBalance("quota-aid-total-balance", cardNewBalance);
+      const newBalance = balance - donationAmount;
+      setBalance("balance", newBalance);
+      showModal();
+      setNotification(donationAmount, donationTitle);
     }
   });
