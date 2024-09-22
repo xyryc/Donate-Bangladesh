@@ -69,11 +69,11 @@
 
         <!-- buttons -->
         <div class="py-6 flex items-center justify-center gap-4 bg-white">
-          <button class="btn bg-btnGreen text-xl font-semibold md:px-8">
+          <button id="donation-button" class="btn bg-btnGreen text-xl font-semibold md:px-8">
             Donation
           </button>
           <button
-            class="btn btn-outline text-xl font-medium md:px-8 text-gray-500"
+            id="history-button" class="btn btn-outline text-xl font-medium md:px-8 text-gray-500"
           >
             History
           </button>
@@ -84,7 +84,7 @@
     <main class="mt-44 py-20 container mx-auto">
       <section class="px-5 xl:px-0">
         <!-- donation card container -->
-        <div class="space-y-8">
+        <div id="donation-cards" class="space-y-8">
           <!-- card 1 -->
           <div
             class="flex justify-center items-center flex-col lg:flex-row gap-8 p-6 md:p-8 border rounded-2xl"
@@ -229,7 +229,7 @@
           <!-- The Modal -->
           <div
             id="donation-modal"
-            class="hidden fixed inset-0  items-center justify-center text-center bg-zinc-100 bg-opacity-50 z-50"
+            class="hidden fixed inset-0 items-center justify-center text-center bg-zinc-100 bg-opacity-50 z-50"
           >
             <div class="bg-white p-6 rounded-lg shadow-lg max-w-md w-full">
               <h2 class="text-2xl font-semibold mb-4">Congrats</h2>
@@ -242,6 +242,9 @@
             </div>
           </div>
         </div>
+
+        <!-- history container -->
+        <div id="history-cards">History</div>
       </section>
     </main>
 
@@ -250,6 +253,6 @@
     <script src="./js/utilities.js"></script>
     <script src="./js/index.js"></script>
     <script src="./js/modal.js"></script>
-
+    <script src="./js/toggle.js"></script>
   </body>
 </html>
