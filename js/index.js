@@ -1,6 +1,7 @@
 document
   .getElementById("donate-button-noakhali")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     const balance = getTextFieldValueById("balance");
     const donationAmount = getInputFieldValueById("donation-amount-noakhali");
     const cardBalance = getTextFieldValueById("noakhali-total-balance");
@@ -25,7 +26,8 @@ document
 
 document
   .getElementById("donate-button-feni")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     const balance = getTextFieldValueById("balance");
     const donationAmount = getInputFieldValueById("donation-amount-feni");
     const cardBalance = getTextFieldValueById("feni-total-balance");
@@ -50,7 +52,8 @@ document
 
 document
   .getElementById("donate-button-quota-aid")
-  .addEventListener("click", function () {
+  .addEventListener("click", function (event) {
+    event.preventDefault();
     const balance = getTextFieldValueById("balance");
     const donationAmount = getInputFieldValueById("donation-amount-quota-aid");
     const cardBalance = getTextFieldValueById("quota-aid-total-balance");
