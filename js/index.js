@@ -20,5 +20,7 @@ document
 
       const newBalance = balance - donationAmount;
       setBalance("balance", newBalance);
+
+      showModal();
     }
   });
