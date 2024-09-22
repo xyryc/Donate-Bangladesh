@@ -28,6 +28,7 @@
             colors: {
               clifford: "#da373d",
               btnGreen: "#B4F461",
+              navbar: "#F9F7F3",
             },
           },
         },
@@ -43,27 +44,43 @@
   </head>
   <body class="font-lexend">
     <header>
-      <nav>
-        
-      </nav>
-    </header>
+      <!-- navbar container -->
+      <nav class="bg-navbar pt-3 2xl:pt-6 space-y-3 2xl:space-y-6  fixed top-0 z-50 w-full">
+        <!-- navbar -->
+        <div class="navbar container mx-auto">
+          <div class="navbar-start">
+            <button class="btn bg-btnGreen text-xl font-semibold px-8">
+              Blog
+            </button>
+          </div>
+          <div class="navbar-center">
+            <img src="./assets/logo.png" alt="" />
+            <a class="btn btn-ghost text-xl hidden md:flex">Donate Bangladesh</a>
+          </div>
+          <div class="navbar-end space-x-3">
+            <img src="./assets/coin.png" alt="" />
+            <p><span>5500</span> BDT</p>
+          </div>
+        </div>
 
-    <main class="py-20 container mx-auto">
-      <section class="px-5 xl:px-0">
         <!-- buttons -->
         <div
-          class="mb-8 flex flex-col md:flex-row items-center justify-center gap-4"
+          class="py-6  flex  items-center justify-center gap-4 bg-white"
         >
-          <button class="btn bg-btnGreen text-xl font-semibold px-8">
+          <button class="btn bg-btnGreen text-xl font-semibold md:px-8">
             Donation
           </button>
           <button
-            class="btn btn-outline text-xl font-medium px-8 text-gray-500"
+            class="btn btn-outline text-xl font-medium md:px-8 text-gray-500"
           >
             History
           </button>
         </div>
+      </nav>
+    </header>
 
+    <main class="mt-44 py-20 container mx-auto">
+      <section class="px-5 xl:px-0">
         <!-- card container -->
         <div class="space-y-8">
           <!-- card 1 -->
@@ -208,5 +225,7 @@
         </div>
       </section>
     </main>
+
+    <footer class="py-36 bg-navbar"></footer>
   </body>
 </html>
