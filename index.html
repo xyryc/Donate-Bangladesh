@@ -45,7 +45,9 @@
   <body class="font-lexend">
     <header>
       <!-- navbar container -->
-      <nav class="bg-navbar pt-3 2xl:pt-6 space-y-3 2xl:space-y-6  fixed top-0 z-50 w-full">
+      <nav
+        class="bg-navbar pt-3 2xl:pt-6 space-y-3 2xl:space-y-6 fixed top-0 z-50 w-full"
+      >
         <!-- navbar -->
         <div class="navbar container mx-auto">
           <div class="navbar-start">
@@ -55,18 +57,18 @@
           </div>
           <div class="navbar-center">
             <img src="./assets/logo.png" alt="" />
-            <a class="btn btn-ghost text-xl hidden md:flex">Donate Bangladesh</a>
+            <a class="btn btn-ghost text-xl hidden md:flex"
+              >Donate Bangladesh</a
+            >
           </div>
           <div class="navbar-end space-x-3">
             <img src="./assets/coin.png" alt="" />
-            <p><span>5500</span> BDT</p>
+            <p><span id="balance">5500</span> BDT</p>
           </div>
         </div>
 
         <!-- buttons -->
-        <div
-          class="py-6  flex  items-center justify-center gap-4 bg-white"
-        >
+        <div class="py-6 flex items-center justify-center gap-4 bg-white">
           <button class="btn bg-btnGreen text-xl font-semibold md:px-8">
             Donation
           </button>
@@ -81,7 +83,7 @@
 
     <main class="mt-44 py-20 container mx-auto">
       <section class="px-5 xl:px-0">
-        <!-- card container -->
+        <!-- donation card container -->
         <div class="space-y-8">
           <!-- card 1 -->
           <div
@@ -94,7 +96,7 @@
                 class="inline-flex gap-2 items-center bg-gray-100 px-4 py-2.5 rounded-lg"
               >
                 <img src="./assets/coin.png" alt="" />
-                <p><span>0</span> BDT</p>
+                <p><span id="noakhali-total-balance">1000</span> BDT</p>
               </div>
 
               <!-- title and description -->
@@ -113,14 +115,15 @@
               <!-- donation input amount -->
               <input
                 class="text-base font-light border p-[18px] mt-6 mb-4 w-full rounded-lg"
-                type="number"
+                type="text"
                 name=""
-                id=""
+                id="donation-amount-noakhali"
                 placeholder="Write Donation Amount"
               />
 
               <!-- donate button -->
               <button
+                id="donate-button-noakhali"
                 class="btn w-full bg-btnGreen text-xl font-semibold rounded-lg"
               >
                 Donate Now
@@ -227,5 +230,8 @@
     </main>
 
     <footer class="py-36 bg-navbar"></footer>
+
+    <script src="./js/utilities.js"></script>
+    <script src="./js/index.js"></script>
   </body>
 </html>
