@@ -69,11 +69,15 @@
 
         <!-- buttons -->
         <div class="py-6 flex items-center justify-center gap-4 bg-white">
-          <button id="donation-button" class="btn bg-btnGreen text-xl font-semibold md:px-8">
+          <button
+            id="donation-button"
+            class="btn bg-btnGreen text-xl font-semibold md:px-8"
+          >
             Donation
           </button>
           <button
-            id="history-button" class="btn btn-outline text-xl font-medium md:px-8 text-gray-500"
+            id="history-button"
+            class="btn btn-outline text-xl font-medium md:px-8 text-gray-500"
           >
             History
           </button>
@@ -244,7 +248,9 @@
         </div>
 
         <!-- history container -->
-        <div id="history-cards">History</div>
+        <div id="history-cards" class="hidden space-y-6">
+          <!-- notifications will be added here -->
+        </div>
       </section>
     </main>
 
