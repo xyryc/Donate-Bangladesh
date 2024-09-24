@@ -75,3 +75,31 @@ document
       setNotification(donationAmount, donationTitle);
     }
   });
+
+document
+  .getElementById("donate-button-palestine-aid")
+  .addEventListener("click", function (event) {
+    event.preventDefault();
+    const balance = getTextFieldValueById("balance");
+    const donationAmount = getInputFieldValueById(
+      "donation-amount-palestine-aid"
+    );
+    const cardBalance = getTextFieldValueById("palestine-aid-total-balance");
+    const donationTitle = getTextById("palestine-aid-donation-title");
+
+    if (
+      donationAmount > balance ||
+      isNaN(donationAmount) ||
+      donationAmount <= 0
+    ) {
+      alert("Invalid Donation Amount");
+      return;
+    } else {
+      const cardNewBalance = cardBalance + donationAmount;
+      setBalance("palestine-aid-total-balance", cardNewBalance);
+      const newBalance = balance - donationAmount;
+      setBalance("balance", newBalance);
+      showModal();
+      setNotification(donationAmount, donationTitle);
+    }
+  });
